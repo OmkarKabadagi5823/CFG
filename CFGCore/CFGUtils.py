@@ -77,7 +77,7 @@ class CFGPrinter():
             
             print("{}".format(rule))
 
-class Formater():
+class Format():
     @staticmethod
     def bold(str):
         return "\033[1m" + str + "\033[0m"

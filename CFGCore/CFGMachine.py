@@ -36,19 +36,19 @@ class CFGMachine():
             self.buffer.terminals.copy(), self.buffer.nonTerminals.copy(), self.buffer.productions.copy(), self.buffer.start
     
     def summary(self):
-        print("{}".format(Formater.underline("CFG:-")))
-        print("{}: {}".format(Formater.bold("Terminals"), self.container.terminals))
-        print("{}: {}".format(Formater.bold("Non-Terminals"), self.container.nonTerminals))
-        print("{}: {}".format(Formater.bold("Start"), self.container.start))
-        print("{}:".format(Formater.bold("Productions")))
+        print("{}".format(Format.underline("CFG:-")))
+        print("{}: {}".format(Format.bold("Terminals"), self.container.terminals))
+        print("{}: {}".format(Format.bold("Non-Terminals"), self.container.nonTerminals))
+        print("{}: {}".format(Format.bold("Start"), self.container.start))
+        print("{}:".format(Format.bold("Productions")))
         CFGPrinter.productionsPrinter(self.container.productions)
 
     def bufferSummary(self, msg):
-        print("{}".format(Formater.underline(msg)))
-        print("{}: {}".format(Formater.bold("Terminals"), self.buffer.terminals))
-        print("{}: {}".format(Formater.bold("Non-Terminals"), self.buffer.nonTerminals))
-        print("{}: {}".format(Formater.bold("Start"), self.buffer.start))
-        print("{}:".format(Formater.bold("Productions")))
+        print("{}".format(Format.underline(msg)))
+        print("{}: {}".format(Format.bold("Terminals"), self.buffer.terminals))
+        print("{}: {}".format(Format.bold("Non-Terminals"), self.buffer.nonTerminals))
+        print("{}: {}".format(Format.bold("Start"), self.buffer.start))
+        print("{}:".format(Format.bold("Productions")))
         CFGPrinter.productionsPrinter(self.buffer.productions)
 
     def eliminateStartRhs(self, output=False):
